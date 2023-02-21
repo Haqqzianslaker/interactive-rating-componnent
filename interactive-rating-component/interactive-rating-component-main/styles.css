@@ -1,0 +1,188 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display:flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  padding:1.5rem;
+  padding-inline:1.5rem;
+  background-color: var(--bgColor);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+--btnColor : hsl(25, 97%, 53%);
+--primary-heading: hsl(0, 0%, 100%);
+--primary-paragraph: hsl(217, 12%, 63%);
+--listColor:  hsl(216, 12%, 54%);
+--cardBgColor: hsl(213, 19%, 18%);
+--bgColor: hsl(216, 12%, 8%);
+  --ff-body: 'Overpass', sans-serif;
+--ff-regular: 400;
+--ff-bold:700;
+}
+.bg-color{
+  background: hsl(0, 0%, 100%,0.1);
+
+}
+.color__rating{
+  color: var(--btnColor);
+  background: hsla(0,0,100,0.1);
+}
+.color__paragraph{
+  color:var(--primary-paragraph);
+}
+.container{
+  border: 1px solid var(--cardBgColor);
+  display:flex;
+  flex-direction:column;
+  gap:1.45rem;  
+  width: 340px;
+  padding:0;
+  height:375px;
+  border-radius: 0.8rem;
+  padding-block:1.2rem;
+  padding-inline:1.5rem;
+  background-color: var(--cardBgColor);
+  justify-self: center; 
+}
+.container2{
+  border: 1px solid var(--cardBgColor);
+  width: 340px;
+  height:360px;
+  border-radius: 0.8rem;
+  padding-block:1.2rem;
+  padding-inline:1.5rem;
+  background-color: var(--cardBgColor);
+}
+.center{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.rounded-edge{
+  border-radius: 1.2rem;
+  padding-inline:1.2rem;
+  margin-block:0.9rem;
+  background: rgba(155, 119, 119, 0.1);
+  border:0;
+}
+.margin{
+  margin-block-end: 0.8rem;
+}
+.llustration-thank-you{
+  place-content: center;
+}
+.hidden{
+  display:none;
+}
+.rounded-bg{
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 50%;
+}
+.logo{
+  width:14px;
+  height:14px;
+}
+.container__heading{
+  color:var(--primary-heading);
+  font-family:var(--ff-body);
+  font-weight:var(--ff-bold);
+}
+.container__paragraph{
+  color:var(--primary-paragraph);
+}
+.list-item{
+  display:flex;
+  gap:1.5rem;
+  /*padding-inline-start:1.2rem; */
+}
+
+.list-item .btn{
+text-decoration: none;
+border:1px solid var(--cardBgColor);
+border-radius:50%;
+padding-block:.8rem;
+color:var(--primary-paragraph);
+padding-inline:1.0rem;
+font-weight: var(--ff-bold);
+
+}
+.list-item .btn:hover{
+  background-color: var(--btnColor);
+  cursor:pointer;
+}
+
+.card__button{
+  border-radius: 1.3rem;
+  padding-block: 1rem;
+  padding-inline: 5.0rem;
+  color:var(--primary-heading);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: var(--btnColor);
+  border:0;
+}
+.card__button:hover{
+  background-color: var(--primary-heading);
+  cursor:pointer;
+  color:var(--btnColor);
+}
